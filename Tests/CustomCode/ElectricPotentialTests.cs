@@ -23,9 +23,19 @@ namespace UnitsNet.Tests.CustomCode
 {
     public class ElectricPotentialTests : ElectricPotentialTestsBase
     {
+        protected override double MillivoltsInOneVolt
+        {
+            get { return 1e3; }
+        }
+
         protected override double VoltsInOneVolt
         {
             get { return 1; }
+        }
+
+        protected override double KilovoltsInOneVolt
+        {
+            get { return 1e-3; }
         }
     }
 }
